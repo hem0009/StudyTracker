@@ -26,7 +26,7 @@ public class ClassDetail extends AppCompatActivity {
     Button viewTests;
     DatabaseHelper myDb;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_activity);
         myDb = new DatabaseHelper(this);
@@ -50,10 +50,11 @@ public class ClassDetail extends AppCompatActivity {
         txtTeacher.setText(teacher);
         txtType=(TextView)findViewById(R.id.detailType);
         txtType.setText(type);
-        txtPoints=(TextView)findViewById(R.id.detailPoints);
-        txtPoints.setText(points);
+        //txtPoints=(TextView)findViewById(R.id.detailPoints);
+        //txtPoints.setText(points);
         viewTests=(Button)findViewById(R.id.showAll);
         viewAll();
+        settingBut();
     }
 
     public void settingBut()
@@ -62,7 +63,7 @@ public class ClassDetail extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),FormActivity.class);
+                Intent intent = new Intent(getApplicationContext(),TestFormActivity.class);
                 startActivity(intent);
             }
         });
@@ -73,6 +74,7 @@ public class ClassDetail extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Cursor res = myDb.getAllTest();
+                        //Cursor res = myDb.getAllTest(txtKOD.toString());
                         if(res.getCount() == 0) {
                             // show message
                             showMessage("Error","Nothing found");
@@ -86,11 +88,11 @@ public class ClassDetail extends AppCompatActivity {
                             buffer.append("Min :"+ res.getInt(2)+"\n");
                             buffer.append("Max :"+ res.getInt(3)+"\n");
                             buffer.append("When :"+res.getString(4)+"\n");
-                            buffer.append("Gained :"+res.getString(5)+"\n\n");
+                            buffer.append("Gained :"+res.getInt(5)+"\n\n");
                         }
 
                         // Show all data
-                        showMessage("Data",buffer.toString());
+                        showMessage("My tests",buffer.toString());
                     }
                 }
         );

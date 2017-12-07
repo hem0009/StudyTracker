@@ -19,7 +19,7 @@ public class FormActivity extends Activity {
     Button btnAddData;
     Button btnviewAll;
     Button btnDelete;
-    Button btnviewUpdate;
+    //Button btnviewUpdate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class FormActivity extends Activity {
         editType = (EditText)findViewById(R.id.editText_type);
         btnAddData = (Button)findViewById(R.id.button_add);
         btnviewAll = (Button)findViewById(R.id.button_viewAll);
-        btnviewUpdate= (Button)findViewById(R.id.button_update);
+        //btnviewUpdate= (Button)findViewById(R.id.button_update);
         btnDelete= (Button)findViewById(R.id.button_delete);
         AddData();
         viewAll();

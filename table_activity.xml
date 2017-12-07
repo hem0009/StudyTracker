@@ -1,99 +1,680 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mytable"
+    >
     android:stretchColumns="1">
     <TableRow>
         <TextView
+            android:id="@+id/r1c1"
+            android:background="@drawable/back"
             android:layout_column="1"
             android:text=""
             android:width="30dp"
-            android:height="30dp"
-            android:backgroundTint="@color/colorPrimaryDark"
+            android:height="40dp"
             />
         <TextView
+            android:id="@+id/r1c2"
+            android:background="@drawable/back"
             android:layout_column="2"
             android:text="7:15\n8:00"
             android:width="40dp"
-            android:height="30dp"
+            android:height="40dp"
             />
         <TextView
+            android:id="@+id/r1c3"
+            android:background="@drawable/back"
             android:layout_column="3"
             android:text="8:00\n8:45"
             android:width="40dp"
-            android:height="30dp"
+            android:height="40dp"
             />
         <TextView
-        android:layout_column="4"
-        android:text="9:00\n9:45"
+            android:id="@+id/r1c4"
+            android:background="@drawable/back"
+            android:layout_column="4"
+            android:text="9:00\n9:45"
             android:width="40dp"
-            android:height="30dp"
+            android:height="40dp"
         />
         <TextView
-        android:layout_column="5"
-        android:text="9:45\n10:30"
+            android:id="@+id/r1c5"
+            android:background="@drawable/back"
+            android:layout_column="5"
+            android:text="9:45\n10:30"
             android:width="40dp"
-            android:height="30dp"
+            android:height="40dp"
         />
         <TextView
+            android:id="@+id/r1c6"
+            android:background="@drawable/back"
             android:layout_column="6"
             android:text="9:45\n10:30"
             android:width="40dp"
-            android:height="30dp"
+            android:height="40dp"
             />
         <TextView
+            android:id="@+id/r1c7"
+            android:background="@drawable/back"
             android:layout_column="7"
             android:text="9:45\n10:30"
             android:width="40dp"
-            android:height="30dp"
+            android:height="40dp"
             />
         <TextView
+            android:id="@+id/r1c8"
+            android:background="@drawable/back"
             android:layout_column="8"
             android:text="9:45\n10:30"
             android:width="40dp"
-            android:height="30dp"
+            android:height="40dp"
             />
         <TextView
+            android:id="@+id/r1c9"
+            android:background="@drawable/back"
             android:layout_column="9"
             android:text="9:45\n10:30"
             android:width="40dp"
-            android:height="30dp"
+            android:height="40dp"
             />
         <TextView
+            android:id="@+id/r1c10"
+            android:background="@drawable/back"
             android:layout_column="10"
             android:text="9:45\n10:30"
             android:width="40dp"
-            android:height="30dp"
+            android:height="40dp"
             />
         <TextView
+            android:id="@+id/r1c11"
+            android:background="@drawable/back"
             android:layout_column="11"
             android:text="9:45\n10:30"
             android:width="40dp"
-            android:height="30dp"
+            android:height="40dp"
             />
         <TextView
+            android:id="@+id/r1c12"
+            android:background="@drawable/back"
             android:layout_column="12"
             android:text="9:45\n10:30"
             android:width="40dp"
-            android:height="30dp"
+            android:height="40dp"
             />
         <TextView
+            android:id="@+id/r1c13"
+            android:background="@drawable/back"
             android:layout_column="13"
             android:text="9:45\n10:30"
             android:width="40dp"
-            android:height="30dp"
+            android:height="40dp"
             />
         <TextView
+            android:id="@+id/r1c14"
+            android:background="@drawable/back"
             android:layout_column="14"
             android:text="9:45\n10:30"
             android:width="40dp"
-            android:height="30dp"
+            android:height="40dp"
             />
         <TextView
+            android:id="@+id/r1c15"
+            android:background="@drawable/back"
             android:layout_column="15"
             android:text="18:30\n19:15"
             android:width="40dp"
-            android:height="30dp"
+            android:height="40dp"
             />
     </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/r2c1"
+            android:background="@drawable/back"
+            android:layout_column="1"
+            android:text="Mo"
+            android:width="30dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r2c2"
+            android:background="@drawable/back"
+            android:layout_column="2"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r2c3"
+            android:background="@drawable/back"
+            android:layout_column="3"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r2c4"
+            android:background="@drawable/back"
+            android:layout_column="4"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r2c5"
+            android:background="@drawable/back"
+            android:layout_column="5"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r2c6"
+            android:background="@drawable/back"
+            android:layout_column="6"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r2c7"
+            android:background="@drawable/back"
+            android:layout_column="7"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r2c8"
+            android:background="@drawable/back"
+            android:layout_column="8"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r2c9"
+            android:background="@drawable/back"
+            android:layout_column="9"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r2c10"
+            android:background="@drawable/back"
+            android:layout_column="10"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r2c11"
+            android:background="@drawable/back"
+            android:layout_column="11"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r2c12"
+            android:background="@drawable/back"
+            android:layout_column="12"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r2c13"
+            android:background="@drawable/back"
+            android:layout_column="13"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r2c14"
+            android:background="@drawable/back"
+            android:layout_column="14"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r2c15"
+            android:background="@drawable/back"
+            android:layout_column="15"
+            android:width="40dp"
+            android:height="40dp"
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/r3c1"
+            android:background="@drawable/back"
+            android:layout_column="1"
+            android:text="Tu"
+            android:width="30dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r3c2"
+            android:background="@drawable/back"
+            android:layout_column="2"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r3c3"
+            android:background="@drawable/back"
+            android:layout_column="3"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r3c4"
+            android:background="@drawable/back"
+            android:layout_column="4"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r3c5"
+            android:background="@drawable/back"
+            android:layout_column="5"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r3c6"
+            android:background="@drawable/back"
+            android:layout_column="6"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r3c7"
+            android:background="@drawable/back"
+            android:layout_column="7"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r3c8"
+            android:background="@drawable/back"
+            android:layout_column="8"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r3c9"
+            android:background="@drawable/back"
+            android:layout_column="9"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r3c10"
+            android:background="@drawable/back"
+            android:layout_column="10"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r3c11"
+            android:background="@drawable/back"
+            android:layout_column="11"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r3c12"
+            android:background="@drawable/back"
+            android:layout_column="12"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r3c13"
+            android:background="@drawable/back"
+            android:layout_column="13"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r3c14"
+            android:background="@drawable/back"
+            android:layout_column="14"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r3c15"
+            android:background="@drawable/back"
+            android:layout_column="15"
+            android:width="40dp"
+            android:height="40dp"
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/r4c1"
+            android:layout_column="1"
+            android:text="We"
+            android:width="30dp"
+            android:height="40dp"
+            android:background="@drawable/back"
+            />
+        <TextView
+            android:id="@+id/r4c2"
+            android:background="@drawable/back"
+            android:layout_column="2"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r4c3"
+            android:background="@drawable/back"
+            android:layout_column="3"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r4c4"
+            android:background="@drawable/back"
+            android:layout_column="4"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r4c5"
+            android:background="@drawable/back"
+            android:layout_column="5"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r4c6"
+            android:background="@drawable/back"
+            android:layout_column="6"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r4c7"
+            android:background="@drawable/back"
+            android:layout_column="7"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r4c8"
+            android:background="@drawable/back"
+            android:layout_column="8"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r4c9"
+            android:background="@drawable/back"
+            android:layout_column="9"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r4c10"
+            android:background="@drawable/back"
+            android:layout_column="10"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r4c11"
+            android:background="@drawable/back"
+            android:layout_column="11"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r4c12"
+            android:background="@drawable/back"
+            android:layout_column="12"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r4c13"
+            android:background="@drawable/back"
+            android:layout_column="13"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r4c14"
+            android:background="@drawable/back"
+            android:layout_column="14"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r4c15"
+            android:background="@drawable/back"
+            android:layout_column="15"
+            android:width="40dp"
+            android:height="40dp"
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/r5c1"
+            android:background="@drawable/back"
+            android:layout_column="1"
+            android:text="Th"
+            android:width="30dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r5c2"
+            android:background="@drawable/back"
+            android:layout_column="2"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r5c3"
+            android:background="@drawable/back"
+            android:layout_column="3"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r5c4"
+            android:background="@drawable/back"
+            android:layout_column="4"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r5c5"
+            android:background="@drawable/back"
+            android:layout_column="5"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r5c6"
+            android:background="@drawable/back"
+            android:layout_column="6"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r5c7"
+            android:background="@drawable/back"
+            android:layout_column="7"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r5c8"
+            android:background="@drawable/back"
+            android:layout_column="8"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r5c9"
+            android:background="@drawable/back"
+            android:layout_column="9"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r5c10"
+            android:background="@drawable/back"
+            android:layout_column="10"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r5c11"
+            android:background="@drawable/back"
+            android:layout_column="11"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r5c12"
+            android:background="@drawable/back"
+            android:layout_column="12"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r5c13"
+            android:background="@drawable/back"
+            android:layout_column="13"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r5c14"
+            android:background="@drawable/back"
+            android:layout_column="14"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r5c15"
+            android:background="@drawable/back"
+            android:layout_column="15"
+            android:width="40dp"
+            android:height="40dp"
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/r6c1"
+            android:background="@drawable/back"
+            android:layout_column="1"
+            android:text="Fr"
+            android:width="30dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r6c2"
+            android:background="@drawable/back"
+            android:layout_column="2"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r6c3"
+            android:background="@drawable/back"
+            android:layout_column="3"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r6c4"
+            android:background="@drawable/back"
+            android:layout_column="4"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r6c5"
+            android:background="@drawable/back"
+            android:layout_column="5"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r6c6"
+            android:background="@drawable/back"
+            android:layout_column="6"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r6c7"
+            android:background="@drawable/back"
+            android:layout_column="7"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r6c8"
+            android:background="@drawable/back"
+            android:layout_column="8"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r6c9"
+            android:background="@drawable/back"
+            android:layout_column="9"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r6c10"
+            android:background="@drawable/back"
+            android:layout_column="10"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r6c11"
+            android:background="@drawable/back"
+            android:layout_column="11"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r6c12"
+            android:background="@drawable/back"
+            android:layout_column="12"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r6c13"
+            android:background="@drawable/back"
+            android:layout_column="13"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r6c14"
+            android:background="@drawable/back"
+            android:layout_column="14"
+            android:width="40dp"
+            android:height="40dp"
+            />
+        <TextView
+            android:id="@+id/r6c15"
+            android:background="@drawable/back"
+            android:layout_column="15"
+            android:width="40dp"
+            android:height="40dp"
+            />
+    </TableRow>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="45dp"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />
 </TableLayout>

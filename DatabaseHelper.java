@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -18,6 +19,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     //tables
     public static final String TABLE_CLASS = "class_table";
     public static final String TABLE_TESTS = "tests_table";
+    public static final String TABLE_TIMETABLE ="timetable_table";
     //class_table columns
     public static final String COL_1 = "KOD";
     public static final String COL_2 = "Name";
@@ -28,8 +30,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_22 = "What";
     public static final String COL_33 = "Min";
     public static final String COL_44 = "Max";
-    public static final String COL_55 = "When";
+    public static final String COL_55 = "Date";
     public static final String COL_66 = "Gained";
+    //timetable_table columns
+    public static final String COL_111 = "Id";
+    public static final String COL_222 = "Input";
+    public static final String COL_333 = "Color";
     public DatabaseHelper (Context context)
     {
         super(context,DATABASE,null,1);
@@ -40,7 +46,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db)
     {
         db.execSQL("create table "+TABLE_CLASS+" (KOD TEXT, Name TEXT, Teacher text, Type text)");
-        db.execSQL("create table "+TABLE_TESTS+" (KOD TEXT, What TEXT, Min INTEGER, Max INTEGER, When TEXT");
+        db.execSQL("create table "+TABLE_TESTS+" (KOD TEXT, What TEXT, Min INTEGER, Max INTEGER, Date TEXT, Gained INTEGER)");
+        db.execSQL("create table "+TABLE_TIMETABLE+" (Id INTEGER, Input TEXT, Color INTEGER)");
     }
 
     @Override
@@ -48,6 +55,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     {
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_CLASS );
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_TESTS);
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE_TIMETABLE);
         onCreate(db);
     }
 
@@ -65,15 +73,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else
             return true;
     }
-    public boolean insertTest(String kod, String what, int min, int max, String when)
+    public boolean insertTest(String kod, String what, String min, String max, String date)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_11,kod);
         contentValues.put(COL_22,what);
-        contentValues.put(COL_33,min);
-        contentValues.put(COL_44,max);
-        contentValues.put(COL_55,when);
+        contentValues.put(COL_33,Integer.parseInt(min));
+        contentValues.put(COL_44,Integer.parseInt(max));
+        contentValues.put(COL_55,date);
         contentValues.put(COL_66,0);
         long result = db.insert(TABLE_TESTS,null,contentValues);
         if(result == -1)
@@ -82,6 +90,44 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         else
             return true;
+    }
+
+    public boolean insertInput(int id, String input, int color)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL_111,id);
+        contentValues.put(COL_222,input);
+        contentValues.put(COL_333,color);
+        long result = db.insert(TABLE_TIMETABLE,null,contentValues);
+        if(result == -1)
+        {
+            return false;
+        }
+        else
+            return true;
+    }
+    public boolean insertPoints (String kod, String gained)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL_66,Integer.parseInt(gained));
+        db.update(TABLE_TESTS,contentValues,"KOD = ?",new String[]{kod});
+        return true;
+    }
+
+
+    public String getText(int id)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String select = "select Input from timetable_table where Id = "+id;
+        Cursor cursor = db.rawQuery(select,null);
+        String value="";
+        if(cursor.moveToFirst())
+        {
+            value = cursor.getString(0);
+        }
+        return value;
     }
     public Cursor getAllData()
     {
@@ -95,21 +141,32 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor res = db.rawQuery("select * from "+TABLE_TESTS,null);
         return res;
     }
+    /*public Cursor getAllTest(String kod)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from "+TABLE_TESTS+" where KOD like '%"+kod+"%'",null);
+        return res;
+    }*/
     public ArrayList<MyClasses> getData()
     {
         SQLiteDatabase db =this.getReadableDatabase();
         ArrayList<MyClasses> myClasses = new ArrayList<MyClasses>();
         Cursor res = db.rawQuery("select * from "+TABLE_CLASS,null);
-        while (res.moveToNext())
+        if(res!=null & res.getCount()>0)
         {
-            myClasses.add(new MyClasses(res.getString(res.getColumnIndexOrThrow(COL_1)),res.getString(res.getColumnIndex(COL_2)),res.getString(res.getColumnIndex(COL_3)),res.getString(res.getColumnIndex(COL_4))));
+            while (res.moveToNext())
+            {
+                myClasses.add(new MyClasses(res.getString(res.getColumnIndexOrThrow(COL_1)),res.getString(res.getColumnIndex(COL_2)),res.getString(res.getColumnIndex(COL_3)),res.getString(res.getColumnIndex(COL_4))));
 
+            }
         }
+
         return myClasses;
     }
     public Integer deleteData(String kod)
     {
         SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_TESTS,"KOD = ?",new String[]{kod});
         return db.delete(TABLE_CLASS,"KOD = ?",new String [] {kod});
     }
 }

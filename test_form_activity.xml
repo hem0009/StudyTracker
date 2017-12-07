@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"  tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/labeltestKod"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="KOD:" />
+
+    <TextView
+        android:id="@+id/labeltestWhat"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/labeltestKod"
+        android:layout_below="@+id/labeltestKod"
+        android:layout_marginTop="40dp"
+        android:text="What:" />
+
+    <TextView
+        android:id="@+id/labeltestMin"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:text="Min:"
+        android:layout_below="@+id/labeltestWhat"
+        android:layout_alignStart="@+id/labeltestKod" />
+
+    <TextView
+        android:id="@+id/labeltestMax"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/labeltestMin"
+        android:layout_below="@+id/labeltestMin"
+        android:layout_marginTop="40dp"
+        android:text="Max:" />
+
+    <TextView
+        android:id="@+id/labeltestWhen"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/labeltestMax"
+        android:layout_below="@+id/labeltestMax"
+        android:layout_marginTop="40dp"
+        android:text="When:" />
+
+    <TextView
+        android:id="@+id/labeltestGained"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/labeltestWhen"
+        android:layout_below="@+id/labeltestWhen"
+        android:layout_marginTop="40dp"
+        android:text="Gained:" />
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/labeltestKod"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/editKod"
+        />
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/labeltestWhat"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/editWhat"
+        />
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/labeltestMin"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/editMin"
+        />
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/labeltestMax"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/editMax"
+        />
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/labeltestWhen"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/editWhen"/>
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/labeltestGained"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/editGained" />
+
+    <Button
+        android:id="@+id/addTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:text="Add Test"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/labeltestGained" />
+
+    <Button
+        android:id="@+id/addPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editGained"
+        android:layout_alignTop="@+id/addTest"
+        android:text="Add Points" />
+
+    <Button
+        android:id="@+id/howTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/addPoints"
+        android:layout_marginEnd="18dp"
+        android:text="How To" />
+
+
+</RelativeLayout>
